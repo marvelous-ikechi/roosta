@@ -112,9 +112,9 @@ export default function BestSellers() {
     <section className="max-w-[1288px] mx-auto py-16 px-6">
       {/* Section Title */}
       <div className="text-center mb-10">
-        <h2 className="text-2xl font-bold text-gray-900 uppercase">Best Sellers</h2>
+        <h2 className="text-2xl font-bold text-gray-900 uppercase">Biographies</h2>
         <p className="text-gray-600 mt-2">
-          Be the first to grab the books everyone will soon be talking about.
+          These titles are flying off the shelves,get yours now.
         </p>
       </div>
 
@@ -200,7 +200,7 @@ export default function BestSellers() {
             {/* Tags */}
             <div className="flex justify-between items-center text-xs text-gray-600 mb-2">
               <span className="px-2 py-1 bg-gray-100 rounded">{book.category}</span>
-              <span className="text-purple-600 font-medium">{book.tag}</span>
+              <span className="text-purple-800 font-medium">{book.tag}</span>
             </div>
 
             {/* Title */}
