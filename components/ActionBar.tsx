@@ -1,47 +1,35 @@
 "use client";
+import { Menu, Search, Heart, ShoppingCart, User } from "lucide-react"; // icons
 
-import React from 'react';
-// Importing necessary icons
-import { Settings, Search, Heart, ShoppingCart, Bell } from 'lucide-react'; 
-
-function ActionBar() {
+export default function ActionBar() {
   return (
-    <div
-      className="absolute flex items-center bg-white shadow-md z-50 rounded-lg p-2"
-      style={{
-        width: "388px", 
-        height: "40px", 
-        top: "98px",    
-        left: "971px",   
-        gap: "16px",     // Space between the main items (icons and search)
-      }}
-    >
-      
-      {/* 1. Settings Icon */}
-      <Settings className="w-5 h-5 text-gray-600 cursor-pointer hover:text-amber-600 transition" />
-
-      {/* 2. Search Area (Flexible item to take up space) */}
-      <div className="flex items-center flex-grow bg-gray-100 rounded-md h-full px-2"
-           style={{ gap: "4px" }}>
+    <div className="w-full bg-white shadow z-40">
+      <div className="max-w-[1284px] mx-auto flex items-center justify-between py-3 px-6">
         
-        <Search className="w-4 h-4 text-gray-500" />
-        <input
-          type="text"
-          placeholder="Search Book, Authors, or title"
-          className="bg-gray-100 text-sm w-full h-full focus:outline-none"
-        />
-      </div>
+        {/* Left: Hamburger + ALL CATEGORIES */}
+        <div className="flex items-center gap-3 text-gray-800 font-semibold">
+          <Menu className="w-6 h-6" />
+          <span>ALL CATEGORIES</span>
+        </div>
 
-      {/* 3. Love/Heart Icon */}
-      <Heart className="w-5 h-5 text-gray-600 cursor-pointer hover:text-red-500 transition" />
-      
-      {/* 4. Cart Icon */}
-      <ShoppingCart className="w-5 h-5 text-gray-600 cursor-pointer hover:text-amber-600 transition" />
-      
-      {/* 5. Bell/Notification Icon */}
-      <Bell className="w-5 h-5 text-gray-600 cursor-pointer hover:text-amber-600 transition" />
-      
+        {/* Right: Search + Icons */}
+        <div className="flex items-center gap-5">
+          {/* Search box */}
+          <div className="flex items-center border border-gray-300 rounded-md px-3 py-2 w-[300px]">
+            <Search className="w-5 h-5 text-gray-500" />
+            <input
+              type="text"
+              placeholder="Search Book Author or Title"
+              className="ml-2 w-full outline-none text-sm"
+            />
+          </div>
+
+          {/* Icons */}
+          <Heart className="w-5 h-5 text-gray-600 cursor-pointer" />
+          <ShoppingCart className="w-5 h-5 text-gray-600 cursor-pointer" />
+          <User className="w-5 h-5 text-gray-600 cursor-pointer" />
+        </div>
+      </div>
     </div>
   );
 }
-export default ActionBar;
