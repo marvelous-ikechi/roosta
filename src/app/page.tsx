@@ -1,8 +1,7 @@
-// import Hero from '@/components/Hero'; 
 import ActionBar from '@/components/ActionBar'; 
 import HeroImagePlaceholder from '@/components/HeroImagePlaceholder';
-// import MainContentWrapper from '@/components/MainContentWrapper'; // Import the new component
 import ShopByCategory from '@/components/ShopByCategory';
+import BestSellers from '@/components/BestSellers';
 
 export default function Home() {
   return (
@@ -18,6 +17,7 @@ export default function Home() {
       {/* <MainContentWrapper />  */}
       {/* 3. Page Content Sections (Now positioned absolutely, one after the other) */}
       <ShopByCategory /> 
+      <BestSellers />
       
       {/* The original <Hero /> component is not explicitly visible in this fixed layout,
           but if its content is required, it must be placed inside MainContentWrapper or
